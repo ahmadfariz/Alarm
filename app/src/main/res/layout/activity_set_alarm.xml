@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SetAlarmActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alarm Title"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"/>
+
+            <EditText
+                android:id="@+id/textbox_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Title" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/Isi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/nama"
+        app:cardCornerRadius="4dp"
+        android:elevation="2dp"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_view_time_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="12:00"
+                android:textAlignment="center"
+                android:textAppearance="@android:style/TextAppearance.Material.Display2" />
+
+            <Button
+                android:id="@+id/button_rigtone_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_view_time_picker"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="60dp"
+                android:text="Button" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tanggal"
+        android:layout_below="@+id/Isi"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/every_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/every_day"
+                android:textColor="@color/colorPrimary"/>
+
+            <LinearLayout
+                android:id="@+id/checkbox_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="7">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/dv_sunday"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_day_view"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="SUN" />
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/dv_monday"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_day_view"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="MON" />
+
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/dv_tuesday"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_day_view"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="TUE" />
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/dv_wednesday"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_day_view"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="WED" />
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/dv_thursday"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_day_view"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="THU" />
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/dv_friday"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_day_view"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="FRI" />
+
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/dv_saturday"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_day_view"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="SAT" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/button_start_alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tanggal"
+        android:layout_marginLeft="330dp"
+        android:layout_marginTop="130dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:elevation="6dp"
+        android:src="@drawable/ic_done_24"
+        app:fabSize="normal" />
+
+</RelativeLayout>
